@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #ff2da6;
+  --green: #39ff88;
+  --black: #08090d;
+  --panel: #12151d;
+  --white: #f4f4f4;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-bottom: 1px solid var(--pink);
+  padding: 20px 0;
+}
+
+header h1 {
+  color: var(--pink);
+  font-size: 22px;
+  text-shadow: 0 0 12px var(--pink);
+}
+
+header span {
+  color: var(--green);
+  font-size: 12px;
+}
+
+main {
+  max-width: 750px;
+  margin: 45px auto;
+}
+
+.welcome {
+  background: var(--panel);
+  border: 1px solid #292d3a;
+  border-left: 3px solid var(--green);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.welcome p:first-child {
+  color: var(--green);
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.welcome h2 {
+  color: var(--pink);
+  margin: 20px 0;
+  font-size: 28px;
+  text-shadow: 0 0 10px #ff2da655;
+}
+
+.chat {
+  background: var(--panel);
+  border: 1px solid #292d3a;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+#messages {
+  min-height: 180px;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+#messages p {
+  color: var(--green);
+}
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+#user-input {
+  flex: 1;
+  min-width: 0;
+  background: #08090d;
+  border: 1px solid var(--pink);
+  border-radius: 8px;
+  padding: 14px;
+  color: white;
+  outline: none;
+}
+
+button {
+  background: var(--pink);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 15px var(--pink);
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 11px;
+  margin-top: 50px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 14px;
+  }
+
+  .welcome h2 {
+    font-size: 23px;
+  }
+
+  #chat-form {
+    flex-direction: column;
+  }
+
+  #chat-form button {
+    padding: 14px;
+  }
+}
